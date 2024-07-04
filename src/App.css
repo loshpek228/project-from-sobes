@@ -1,0 +1,291 @@
+/* Основной контейнер приложения */
+.app-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+  }
+  
+  /* Заголовок приложения */
+  .app-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Контейнер для добавления задачи */
+  .add-task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  /* Поле ввода задачи */
+  .task-input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Поле ввода задачи при фокусе */
+  .task-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .add-task-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-task-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
+  .filter-button {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1 1 100px;
+    text-align: center;
+  }
+  
+ .filter-button.active {
+    background-color: #007bff;
+  }
+  
+  .filter-button:hover {
+    background-color: #5a6268;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-item:hover {
+    background: #f0f0f0;
+  }
+  
+ 
+  .task-item.important {
+    border-left: 5px solid #dc3545;
+  }
+  
+
+  .task-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+  
+
+  .task-checkbox {
+    transform: scale(1.2);
+  }
+  
+
+  .task-text {
+    flex-grow: 1;
+    font-size: 1em;
+    color: #333;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .task-text.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+  }
+  
+
+  .task-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .task-actions button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  .important-button {
+    background-color: #ffc107;
+    color: #212529;
+  }
+  
+  .important-button:hover {
+    background-color: #e0a800;
+  }
+  
+  .edit-button {
+    background-color: #17a2b8;
+  }
+
+  .edit-button:hover {
+    background-color: #138496;
+  }
+  
+  .edit-task-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-task-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .edit-task-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .save-button {
+    background-color: #28a745;
+  }
+  
+  .save-button:hover {
+    background-color: #218838;
+  }
+  
+  .cancel-button {
+    background-color: #6c757d;
+  }
+  
+  .cancel-button:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Медиазапросы для мобильных устройств */
+  @media (max-width: 768px) {
+    .filters-container {
+      flex-direction: column;
+    }
+  
+    .filter-button {
+      width: 100%;
+    }
+  
+    .add-task-container {
+      flex-direction: column;
+    }
+  
+    .task-input {
+      width: 100%;
+    }
+  
+    .add-task-button {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2em;
+    }
+  
+    .task-content {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .task-actions {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .app-title {
+      font-size: 2em;
+    }
+  
+    .task-input, .edit-task-input {
+      font-size: 0.9em;
+    }
+  
+    .filter-button {
+      padding: 8px;
+      font-size: 0.9em;
+    }
+  
+    .add-task-button {
+      font-size: 1.2em;
+      padding: 12px;
+    }
+  
+    .task-actions button {
+      padding: 6px 10px;
+      font-size: 0.8em;
+    }
+  
+    .task-text {
+      font-size: 0.9em;
+    }
+  }
+  
